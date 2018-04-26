@@ -1,0 +1,120 @@
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="navbar hidden">
+
+        <div class="icons">
+
+<!--        <a href="#" onclick="keskece(4)" class="main_link" id="logo_link">  -->
+        <img src="Huset_logo_22_red.png" alt="logo_menu" id="logo_menu" onclick="keskece(4)">
+<!--         </a>-->
+
+<!--
+            <div class="wrapper-menu">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+
+
+            </div>
+-->
+
+            <div id="main_links">
+                <a href="#" id="event_icon" onclick="keskece(1)" class="main_link"> FILTER </a>
+                <a href="#" onclick="keskece(2)" id="vol_icon" class="main_link" id="vol_icon"> DATE </a>
+                <a href="#" onclick="keskece(3)" id="about_icon" class="main_link"> LOCATION </a>
+                <a href="#" onclick="keskece(4)" class="main_link" id="contact_icon"> CONTACT </a>
+
+            </div>
+        </div>
+
+
+
+        <div class="sub_menu hidden">
+
+            <div id="sub_links_event" class="sub_links hide">
+
+                <p> FETCH THE CATEGORIES </p>
+
+
+            </div>
+
+            <div id="sub_links_vol" class="sub_links hide">
+
+               <p> PUT A CALENDAR </p>
+
+            </div>
+            <div id="sub_links_about" class="sub_links hide">
+
+              <p> FETCH THE VENUES </p>
+
+            </div>
+
+             <div id="sub_links_contact" class="sub_links hide">
+
+              <p> FETCH THE CONTACT </p>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="content contenu">
+
+       <nav id="menutop">
+           <a class="menu_top_link" href="index.html"> EVENTS </a>
+        <a class="menu_top_link" href="infos.html"> INFOS  </a>
+       <a class="menu_top_link" href="about.html"> ABOUT </a>
+
+
+
+       </nav>
+
+        <h1 class="page_title"> INFOS </h1>
+
+        <section id="info_list">
+
+
+        </section>
+
+        <template id="info_template">
+      <article class="info">
+       <h1> TITLE </h1>
+
+        <div class="descript">DESC GOES HERE</div>
+
+
+       </article>
+
+   </template>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="js/dropdown_menu.js"></script>
+       <script src="js/fetching_infos.js"></script>
+
+</body>
+
+</html>

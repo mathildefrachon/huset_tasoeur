@@ -1,0 +1,134 @@
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="navbar hidden">
+
+        <div class="icons">
+
+        <img src="Huset_logo_22_red.png" alt="logo_menu" id="logo_menu" onclick="keskece(4)">
+
+<!--
+            <div class="wrapper-menu">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+
+
+            </div>
+-->
+
+            <div id="main_links">
+                <a href="#" id="event_icon" onclick="keskece(1)" class="main_link"> FILTER </a>
+                <a href="#" onclick="keskece(2)" id="vol_icon" class="main_link" id="vol_icon"> DATE </a>
+                <a href="#" onclick="keskece(3)" id="about_icon" class="main_link"> LOCATION </a>
+                <a href="#" onclick="keskece(4)" class="main_link" id="contact_icon"> CONTACT </a>
+
+            </div>
+        </div>
+
+
+
+        <div class="sub_menu hidden">
+
+            <div id="sub_links_event" class="sub_links hide">
+
+                <h3> ART STAGE </h3>
+                <div class="artList"> </div>
+                <h3> FILMS </h3>
+                <div class="filmList"> </div>
+                <h3> MUSIC </h3>
+                <div class="musicList"> </div>
+                <h3> SPOKEN WORD </h3>
+                <div class="spokenList"> </div>
+                <h3> OTHER </h3>
+                <div class="otherList"> </div>
+                <h3> PRICE </h3>
+                <div class="priceList"> </div>
+
+            </div>
+
+            <div id="sub_links_vol" class="sub_links hide">
+
+               <p> PUT A CALENDAR </p>
+
+            </div>
+            <div id="sub_links_about" class="sub_links hide">
+
+              <h3> VENUES </h3>
+              <div class="venuesList"></div>
+
+            </div>
+
+             <div id="sub_links_contact" class="sub_links hide">
+
+              <p> FETCH THE CONTACT </p>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="content contenu">
+
+       <nav id="menutop">
+           <a class="menu_top_link" href="index.html"> EVENTS </a>
+        <a class="menu_top_link" href="infos.html"> INFOS  </a>
+       <a class="menu_top_link" href="about.html"> ABOUT </a>
+
+
+
+       </nav>
+
+        <h1 class="page_title"> EVENTS </h1>
+
+        <section id="event_list">
+
+
+        </section>
+
+        <template id="event_template">
+      <article class="event">
+       <h1> TITLE </h1>
+       <div class="genre"></div>
+       <img class="image" src="" alt="event_img">
+       <h2 class="price">PRICE</h2>
+        <div class="date"></div>
+         <div class="time"></div>
+         <div class="location"></div>
+        <div class="descript">DESC GOES HERE</div>
+        <div class="small-descript">DESC GOES HERE</div>
+
+       </article>
+
+   </template>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="js/dropdown_menu.js"></script>
+       <script src="js/fetching.js"></script>
+
+</body>
+
+</html>
