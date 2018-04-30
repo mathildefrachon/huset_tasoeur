@@ -15,9 +15,9 @@
 
         <div class="icons">
 
-        <img src="Huset_logo_22_red.png" alt="logo_menu" id="logo_menu" onclick="keskece(4)">
+            <img src="Huset_logo_22_red.png" alt="logo_menu" id="logo_menu" onclick="keskece(4)">
 
-<!--
+            <!--
             <div class="wrapper-menu">
                 <div class="line-menu half start"></div>
                 <div class="line-menu"></div>
@@ -42,7 +42,7 @@
 
             <div id="sub_links_event" class="sub_links hide">
 
-                <h3> ART STAGE </h3>
+               <h3> ART STAGE </h3>
                 <div class="artList"> </div>
                 <h3> FILMS </h3>
                 <div class="filmList"> </div>
@@ -55,23 +55,52 @@
                 <h3> PRICE </h3>
                 <div class="priceList"> </div>
 
+
+
             </div>
 
             <div id="sub_links_vol" class="sub_links hide">
 
-               <p> PUT A CALENDAR </p>
+                <p> PUT A CALENDAR </p>
 
             </div>
             <div id="sub_links_about" class="sub_links hide">
 
-              <h3> VENUES </h3>
+                <h3> VENUES </h3>
               <div class="venuesList"></div>
+
 
             </div>
 
-             <div id="sub_links_contact" class="sub_links hide">
+            <div id="sub_links_contact" class="sub_links hide">
 
-              <p> FETCH THE CONTACT </p>
+
+
+
+
+                 <h1 id="contact_title"></h1>
+                 <p id="contact_descript"></p>
+<!--
+       <h1> HUSET-KBH </h1>
+       <p> Rådhusstræde 13
+1466 Copenhagen K
+Tlf: +45 21 51 21 51
+
+info@huset-kbh.dk </p>
+
+      <h2>OFFICE OPENING HOURS: WEEKDAYS 11.00-15.00 P.M
+</h2>
+      <h3>OPENING HOURS</h3>
+       <p>
+Huset-KBH has varying opening hours. Check when doors open for the individual event here</p>
+-->
+<!--        <div class="descript">DESC GOES HERE</div>-->
+
+
+
+
+
+
 
             </div>
 
@@ -86,56 +115,36 @@
 
     <div class="content contenu">
 
-       <nav id="menutop">
-           <a class="menu_top_link" href="index.html"> EVENTS </a>
-        <a class="menu_top_link" href="infos.html"> INFOS  </a>
-       <a class="menu_top_link" href="about.html"> ABOUT </a>
+        <nav id="menutop">
+            <a class="menu_top_link" href="index.html"> EVENTS </a>
+            <a class="menu_top_link" href="infos.html"> INFOS  </a>
+            <a class="menu_top_link" href="about.html"> ABOUT </a>
 
 
 
+        </nav>
 
-       </nav>
-
-        <h1 class="page_title"> EVENTS </h1>
-
-
-
-        <section id="event_list">
-
-
-        </section>
-
-        <template id="event_template" >
+<!--        <h1 class="page_title"> HUSET:KBH </h1>-->
 
 
 
+        <div id="onePost">
 
-      <article class="event">
-        <div id="overlay"></div>
-       <h1 > TITLE </h1>
-
-       <div class="genre"></div>
-
-
-       <img class="image"  src="" alt="event_img">
+       <h1> TITLE </h1>
+        <div class="genre"></div>
+       <img class="image" src="" alt="event_img">
+       <h2 class="price">PRICE</h2>
         <div class="date"></div>
-        <h2 class="price">PRICE</h2>
          <div class="time"></div>
-          <a class="readmore" id="arrowReadMore" href=""> <p>READ MORE </p> <img src="Huset_logo_22_white.png" ></a>
          <div class="location"></div>
 
-
-
-<!--        <div class="descript">DESC GOES HERE</div>-->
+        <div class="descript">DESC GOES HERE</div>
         <div class="small-descript">DESC GOES HERE</div>
 
 
 
 
-       </article>
-
-   </template>
-
+      </div>
 
 
 
@@ -146,8 +155,16 @@
 
 
 
+
+
+
+
+
+    <script src="js/subpage.js"></script>
     <script src="js/dropdown_menu.js"></script>
-       <script src="js/fetching.js"></script>
+
+
+
 
 </body>
 

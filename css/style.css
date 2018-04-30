@@ -1,27 +1,26 @@
 /* STYLING POSITIONING */
 
-
 body {
     background-color: #d6232d;
     color: white;
-    font-family: futura;
+    font-family: roboto;
     margin: 0;
     padding: 0;
     height: 100vh;
-    width:100vw;
+    width: 100vw;
 }
 
 .contenu {
     padding: 2vw 10vw 5vw 10vw;
-/*    overflow: hidden;*/
-
+    /*    overflow: hidden;*/
 }
 
 #event_list {
     display: grid;
-    grid-gap: 3%;
+    grid-gap: 6vw;
     grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
     grid-template-rows: repeat(auto-fill, 200px), fit-content(100%);
+    overflow: hidden;
 }
 
 #volunteer_post {
@@ -35,16 +34,67 @@ body {
     margin-top: 20vw;
     margin-bottom: 10vw;
     border-bottom: 2px white;
-    /*    grid-auto-rows: min-content;*/
+
 }
 
 .page_title {
     font-size: 2.5em;
-    margin: 0 0 0 0vw
+    margin: 0 0 8vw 0vw
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 
 /* TEMPLATE DESIGN */
+
+
+/*
+#overlay {
+      position:fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+*/
+
+#arrowReadMore img {
+     width: 1vw;
+    margin-left: 2vw;
+}
+#arrowReadMore {
+/*    position:absolute;*/
+    width: 10vw;
+    /*    float:right;*/
+
+    grid-column: 2/3;
+}
+
+#arrowReadMore img:hover {
+    width: 1.2vw;
+    transition: all ease 0.2s;
+    filter: brightness(2px);
+}
+
+article h1 {
+    font-size: 1.5em;
+    margin: 0;
+    grid-column: 1/-1;
+}
+
+.genre {
+    font-size: 1em;
+    font-style: italic;
+    line-height: 1.5em;
+    margin: 0;
+    grid-column: 1/-1;
+}
 
 .descript {
     width: 80%;
@@ -55,29 +105,40 @@ iframe {
     height: auto;
 }
 
-h1 {
-    font-size: 1.5em;
-}
-
-.genre {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.5em;
-}
-
 .image {
     margin-top: 2vw;
+    width: 100%;
+    padding-bottom: 1vw;
+    margin-bottom: 2vw;
+    border-bottom: white solid 0.2vw;
+    grid-column: 1/-1;
 }
 
 .small-descript {
     padding-bottom: 2vw;
     border-bottom: 2px solid white;
     border-bottom-width: thin;
+    grid-column: 1/-1;
 }
 
+.price {
+    grid-column: 2/3;
+}
 
+.date {
+    grid-column: 1/2;
+    display:inline-block;
+}
 
+.time {
+    grid-column: 1/2;
+    display:inline-block;
+}
 
+.location {
+    grid-column: 1/2;
+    display:inline-block;
+}
 
 
 /* MENU TOP */
@@ -86,21 +147,22 @@ h1 {
     width: 100vw;
     height: 15vh;
     padding: 0vw 10vw 5vw 0vw;
-
 }
 
 .menu_top_link {
+    font-weight: 700;
     text-decoration: none;
-    display:inline;
+    display: inline;
     padding: 0vw 14vw 1vw 0vw;
-
     border-bottom: white solid 0.2vw;
-
 }
 
-#menutop a:visited {
+a {
     color: white;
+}
 
+a:visited {
+    color: white;
 }
 
 #menutop a:hover {
@@ -108,22 +170,22 @@ h1 {
 }
 
 
-
 /* MENU SIDE POSITIONING */
 
 .navbar {
     height: auto;
-    width:15vw;
+    width: 15vw;
     background-color: none;
     transition: all ease 1s;
     position: fixed;
-/*    z-index:-5;*/
+    /*    overflow: hidden;*/
+    /*    z-index:-5;*/
 }
 
 .content {
     width: 85vw;
     height: 100vh;
-    float:right;
+    float: right;
     transition: all ease 1s;
 }
 
@@ -136,11 +198,9 @@ h1 {
     left: 0%;
 }
 
-
-
 .sub_menu {
     height: 100vh;
-    width:15vw;
+    width: 15vw;
     background-color: #961d27;
     z-index: -5;
     position: absolute;
@@ -149,15 +209,18 @@ h1 {
     transition: all ease 1s;
 }
 
+
+/*
 .wrapper-menu {
     position: absolute;
     left: 4%;
     top: 15%;
     z-index: 10;
 }
+*/
 
 #logo_menu {
-    width:6vw;
+    width: 6vw;
     margin-left: 4vw;
     margin-top: 4vw;
 }
@@ -175,7 +238,7 @@ h1 {
 
 .shorter {
     width: 60vw;
-    float:right;
+    float: right;
 }
 
 .hidden {
@@ -192,7 +255,7 @@ h1 {
 
 .big_content {
     width: 85vw;
-/*    float:right;*/
+    /*    float:right;*/
 }
 
 .show {
@@ -200,12 +263,10 @@ h1 {
 }
 
 .fadeIn {
-
     animation: fadeInAnim 0.7s ease-in forwards;
 }
 
 .fadeOut {
-
     animation: fadeOutAnim 0.7s ease-in forwards;
 }
 
@@ -230,27 +291,27 @@ h1 {
 
 /* STYLE */
 
-.main_link, .sub_link {
-    font-family: helvetica;
+.main_link,
+.sub_link {
+    font-family: roboto;
     font-size: 1em;
     color: white;
     text-decoration: none;
     font-weight: 900;
     line-height: 1.5em;
     display: block;
-
 }
 
 .sub_links {
+    font-size: 0.8em;
+    /*
     position: absolute;
     left: 15vw;
     top: 0vw;
-    width:25vw;
-    padding:3vw;
-/*    overflow: hidden;*/
-
-
-
+*/
+    width: 25vw;
+    padding: 3vw;
+    float: right;
 }
 
 .sub_links a {
@@ -271,95 +332,44 @@ h1 {
     margin-top: 5vw;
 }
 
-
-
-/* BURGER STYLE */
-
 * {
     box-sizing: border-box;
 }
 
 
-
-
-.wrapper-menu {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: transform 330ms ease-out;
-}
-
-.wrapper-menu.open {
-    transform: rotate(-45deg);
-}
-
-.line-menu {
-    background-color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    height: 6px;
-}
-
-.line-menu.half {
-    width: 50%;
-}
-
-.line-menu.start {
-    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-    transform-origin: right;
-}
-
-.open .line-menu.start {
-    transform: rotate(-90deg) translateX(3px);
-}
-
-.line-menu.end {
-    align-self: flex-end;
-    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-    transform-origin: left;
-}
-
-.open .line-menu.end {
-    transform: rotate(-90deg) translateX(-3px);
-}
-
-
-/* //////////// */
-
 /* ///// CONTACT /////// */
 
 .contact {
     width: 20vw;
-    height:30vw;
+    height: 30vw;
 }
-
-
 
 
 /* //////// CATEGORY //////////// */
 
-.art, .film, .music, .other, .price, .spoken, .venues {
+.art,
+.film,
+.music,
+.other,
+.price,
+.spoken,
+.venues {
     text-decoration: none;
-    display:block;
-    color:white;
-    margin:0;
+    display: block;
+    color: white;
+    margin: 0;
 }
 
 .musicList {
-/*    position:absolute;*/
-/*
+    /*    position:absolute;*/
+    /*
     top:2vw;
     left:5vw;
 */
 }
 
 h3 {
-    margin-top:1vw;
-    margin-bottom:0.5vw;
-    padding:0;
+    margin-top: 1vw;
+    margin-bottom: 0.5vw;
+    padding: 0;
 }
-
-

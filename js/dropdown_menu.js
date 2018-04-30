@@ -25,11 +25,17 @@ function keskece(n) {
         submenu.classList.remove('expend');
         submenu.classList.add('hidden');
         content.classList.toggle('shorter');
-//        sub_links_event.classList.add("fadeOut");
-//        sub_links_vol.classList.add("fadeOut");
-//        sub_links_about.classList.add("fadeOut");
+//       sub_links_event.classList.add("fadeOut");
+//       sub_links_vol.classList.add("fadeOut");
+//      sub_links_about.classList.add("fadeOut");
 //        sub_links_contact.classList.add("fadeOut");
+//        sub_links_event.classList.add('hide');
+//        sub_links_vol.classList.add('hide');
+//        sub_links_contact.classList.add('hide');
+//        sub_links_about.classList.add('hide');
+//        reStartFadeIn(n);
 //         reStartFadeOut(n);
+
 
 
     } else if (submenu.classList.contains('expend') && currentSub != n) {
@@ -39,6 +45,8 @@ function keskece(n) {
         showLinks(n);
 
     } else if (submenu.classList.contains('hidden')) {
+
+
         console.log("submenu not here - open it");
         currentSub = n;
         navbar.classList.remove('hidden');
@@ -365,3 +373,9 @@ function buildMenu(data) {
 
 
 }
+
+
+
+
+
+
