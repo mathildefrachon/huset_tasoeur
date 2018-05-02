@@ -5,23 +5,59 @@ let lookingForData = false;
 let page = 1;
 
 
+//// FILTER BY DATE ////
+var inputDate = "";
+
+//document.getElementById('today2').addEventListener('change', function () {
+//    console.log(this.value);
+//    inputDate = this.value;
+//    let event = document.querySelectorAll('.event');
+//    event.forEach(showEventDate);
+//
+//
+//});
+//
+//function showEventDate(eventDate) {
+//
+//    console.log(inputDate);
+//    console.log(eventDate);
+//
+//    if (inputDate === eventDate.querySelector(".date")) {
+//        console.log("ca marche");
+//
+//
+//    } else {
+//        console.log("ca marche pas");
+//    }
+//}
+
+
+document.getElementById('today2').addEventListener('change', fetchData);
+
+//"http://wordpress-huset.mathildefrachon.com/wp-json/wp/v2/events?_embed&per_page=2&page="
+
 
 function fetchData() {
+
+
     console.log("kikou");
+    console.log(this.value);
+    inputDate = this.value;
     lookingForData = true;
     let urlParams = new URLSearchParams(window.location.search);
 
     let catid = urlParams.get("category");
-    let endpoint = "http://wordpress-huset.mathildefrachon.com/wp-json/wp/v2/events?_embed&per_page=2&page=" + page
+    let endpoint = "http://wordpress-huset.mathildefrachon.com/wp-json/wp/v2/events?_embed&per_page=4&page=" + page
 
     if (catid) { // DRY
-        endpoint = "http://wordpress-huset.mathildefrachon.com/wp-json/wp/v2/events?_embed&per_page=2&page=" + page + "&categories=" + catid
+        endpoint = "http://wordpress-huset.mathildefrachon.com/wp-json/wp/v2/events?_embed&per_page=4&page=" + page + "&categories=" + catid
     }
     fetch(endpoint)
         .then(e => e.json())
         .then(showEvents)
 
 }
+
 
 function showEvents(data) {
     console.log("kikou data");
@@ -44,8 +80,41 @@ function showSingleEvent(anEvent) {
     //    clone.querySelector(".descript").innerHTML = anEvent.content.rendered;
 
 
-    clone.querySelector(".date").textContent = anEvent.acf.date;
+    //////////////////////// DATE ////////////////////////////////
+
+    var dateString = anEvent.acf.date;
+    var year = dateString.substring(0, 4); // first until fourth character
+    var month = dateString.substring(4, 6);
+    var day = dateString.substring(6, 8);
+
+    var dateAcf = year + "-" + month + "-" + day;
+
+    clone.querySelector(".date").textContent = dateAcf;
     clone.querySelector(".time").textContent = anEvent.acf.time;
+
+
+
+
+
+    if (inputDate === dateAcf) {
+
+        console.log(inputDate);
+    console.log(dateAcf);
+        console.log("ca marche");
+
+
+    } else {
+        console.log("ca marche pas");
+    }
+
+
+
+
+
+    ////////////////////////////////////////////////////////////////////
+
+
+
     clone.querySelector(".location").textContent = anEvent.acf.location;
     clone.querySelector(".small-descript").textContent = anEvent.acf["small-des"]; // [] cause "-"
     clone.querySelector(".genre").textContent = anEvent.acf.genre;
@@ -73,14 +142,12 @@ function showSingleEvent(anEvent) {
 
     ////////////////////////
 
-//    imageEvent.addEventListener("click", on);
+    //    imageEvent.addEventListener("click", on);
 
     let event_list = document.querySelector("#event_list");
     event_list.appendChild(clone);
 
     console.log("kikou les images");
-
-
 
 
 
@@ -92,13 +159,23 @@ function showSingleEvent(anEvent) {
 
 fetchData();
 
-function on() {
-    document.getElementById("overlay").style.display = "block";
-}
 
-function off() {
-    document.getElementById("overlay").style.display = "none";
-}
+
+
+
+
+//function on() {
+//    document.getElementById("overlay").style.display = "block";
+//}
+//
+//function off() {
+//    document.getElementById("overlay").style.display = "none";
+//}
+
+
+
+
+
 
 /////// LOADING MORE EVENTS ///////
 
@@ -120,3 +197,5 @@ function bottomVisible() {
     const bottomOfPage = visible + scrollY >= pageHeight;
     return bottomOfPage || pageHeight < visible;
 }
+
+

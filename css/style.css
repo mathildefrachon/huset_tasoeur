@@ -10,6 +10,10 @@ body {
     width: 100vw;
 }
 
+#burger, #cross {
+    display:none;
+}
+
 .contenu {
     padding: 2vw 10vw 5vw 10vw;
     /*    overflow: hidden;*/
@@ -34,7 +38,6 @@ body {
     margin-top: 20vw;
     margin-bottom: 10vw;
     border-bottom: 2px white;
-
 }
 
 .page_title {
@@ -65,14 +68,14 @@ article {
 */
 
 #arrowReadMore img {
-     width: 1vw;
-    margin-left: 2vw;
+    width: 1vw;
+    /*    margin-left: 1vw;*/
 }
+
 #arrowReadMore {
-/*    position:absolute;*/
+    /*    position:absolute;*/
     width: 10vw;
     /*    float:right;*/
-
     grid-column: 2/3;
 }
 
@@ -127,26 +130,28 @@ iframe {
 
 .date {
     grid-column: 1/2;
-    display:inline-block;
+    display: inline-block;
 }
 
 .time {
     grid-column: 1/2;
-    display:inline-block;
+    display: inline-block;
 }
 
 .location {
     grid-column: 1/2;
-    display:inline-block;
+    display: inline-block;
 }
 
 
 /* MENU TOP */
 
 #menutop {
-    width: 100vw;
-    height: 15vh;
-    padding: 0vw 10vw 5vw 0vw;
+    width: 60vw;
+    height: 2vh;
+    padding: 0vw 10vw 2vw 0vw;
+    border-bottom: white solid 0.2vw;
+    margin-bottom: 10vw;
 }
 
 .menu_top_link {
@@ -154,11 +159,11 @@ iframe {
     text-decoration: none;
     display: inline;
     padding: 0vw 14vw 1vw 0vw;
-    border-bottom: white solid 0.2vw;
 }
 
 a {
     color: white;
+    text-decoration: none;
 }
 
 a:visited {
@@ -166,7 +171,13 @@ a:visited {
 }
 
 #menutop a:hover {
-    color: darkred;
+    font-size: 1.2em;
+    opacity: 0.7;
+}
+
+#redlink {
+    color: #961d27;
+    font-size: 1.2em;
 }
 
 
@@ -291,6 +302,20 @@ a:visited {
 
 /* STYLE */
 
+.backButton {
+    width: 1.5vw;
+    transform: scaleX(-1);
+    right: 5%;
+    top: 50%;
+    position: absolute;
+    transition: all ease 0.2s;
+    transform-origin: center;
+}
+
+.backButton:hover {
+    width: 2vw;
+}
+
 .main_link,
 .sub_link {
     font-family: roboto;
@@ -322,7 +347,18 @@ a:visited {
     display: block;
     text-align: left;
     padding: 1vw;
+    transition: all ease 0.2s;
 }
+
+#event_icon:hover,
+#vol_icon:hover,
+#about_icon:hover,
+#contact_icon:hover {
+    font-size: 1.2em;
+}
+
+
+/* DOES NOT WORK ??? PB WITH JAVASCRIPT ?? */
 
 #main_links {
     position: absolute;
@@ -358,6 +394,36 @@ a:visited {
     display: block;
     color: white;
     margin: 0;
+    transition: ease all 0.1s;
+}
+
+.art:hover,
+.film:hover,
+.music:hover,
+.other:hover,
+.price:hover,
+.spoken:hover,
+.venues:hover {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.art:active,
+.film:active,
+.music:active,
+.other:active,
+.price:active,
+.spoken:active,
+.venues:active {
+    color: #961d27;
+    font-size: 1.2em;
+}
+
+
+/*NOT WORKING */
+
+#sub_links_about {
+    margin-top: 19vw;
 }
 
 .musicList {
@@ -372,4 +438,205 @@ h3 {
     margin-top: 1vw;
     margin-bottom: 0.5vw;
     padding: 0;
+}
+
+
+/* CALENDAR */
+
+
+/* Removes the clear button from date inputs */
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+
+/* Removes the spin button */
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+/* Always display the drop down caret */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: white;
+}
+
+
+/* A few custom styles for date inputs */
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #961d27;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: #f8e5ec;
+    padding: 15px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+input[type="date"],
+focus {
+    color: white;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+@media only screen and (max-width:480px) and (orientation:portrait) {
+    .navbar {
+        width: 100vw;
+        height: 40vh;
+        bottom: 0%;
+        display:block;
+    }
+    .icons {
+        height: 20vw;
+        width: 100vw;
+        bottom: 0%;
+    }
+    .sub_menu {
+        width: 100vw;
+    }
+    #main_links a {
+        display: inline;
+        width: 100vw;
+    }
+    .expendIcons {
+        height: 20vw;
+    }
+    .expend {
+        height: 100vh;
+    }
+    .hidden {
+        height: 20vw;
+    }
+    .hide {
+        display: none;
+    }
+    .display {
+        display: block;
+    }
+    .show {
+        display: block;
+    }
+    .sub_links {
+        font-size: 0.8em;
+        /*
+    position: absolute;
+    left: 15vw;
+    top: 0vw;
+*/
+        width: 100vw;
+        padding: 25vw 15vw 10vw 15vw;
+        /*    float: right;*/
+    }
+    .art,
+    .film,
+    .music,
+    .other,
+    .price,
+    .spoken,
+    .venues {
+        margin-bottom: 1vw;
+        font-size: 1.3em;
+        width:40vw;
+    }
+
+    .backButton {
+    width: 15vw;
+    transform: scaleX(-1) rotate(-90deg);
+
+    right: 20%;
+    top: 85%;
+    position: absolute;
+    transition: all ease 0.2s;
+    transform-origin: center;
+}
+
+    .backButton:hover {
+    width: 15vw;
+}
+
+
+
+
+
+    #event_list {
+        display: block;
+    }
+    .event .small-descript {
+        margin-bottom: 25vw;
+        padding-bottom: 10vw;
+    }
+    .page_title {
+        margin-top: 35vw;
+    }
+    #arrowReadMore img {
+        width: 5vw;
+        float: right;
+        /*
+        position:absolute;
+        right:10vw;
+        bottom:20vw;
+*/
+    }
+    article {
+        display: block;
+    }
+
+    .content {
+    width: 100vw;
+    height: 100vh;
+    float: center;
+    transition: all ease 1s;
+}
+
+    /* TOP MENU */
+
+    #menutop {
+        display:none;
+        width: 80vw;
+    height: 20vh;
+    margin-top: 50vh;
+    padding: 0vw 0vw 0vw 0vw;
+    border-bottom: white solid 1vw;
+/*    margin-bottom: 10vw;*/
+/*        padding-top: 40vh;*/
+
+    }
+
+    .menu_top_link {
+        display: block;
+/*        top:30vh;*/
+/*        margin-top:15%;*/
+        font-size: 2em;
+
+    }
+
+    #menutop a:hover {
+    font-size: 2em;
+    opacity: 0.7;
+}
+
+    #burger, #cross {
+        width:15vw;
+        height: 15vh;
+        font-size: 3em;
+        top:5%;
+        left:10vw;
+        position:absolute;
+    }
+
+    #burger {
+        display:block;
+    }
+
 }

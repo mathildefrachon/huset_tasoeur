@@ -10,6 +10,10 @@
 
 <body>
 
+  <div id="burger" onclick="openMenu()">&#9776;</div>
+  <a id="cross" onclick="closeMenu()">&times;</a>
+
+
 
     <div class="navbar hidden">
 
@@ -28,7 +32,7 @@
 -->
 
             <div id="main_links">
-                <a href="#" id="event_icon" onclick="keskece(1)" class="main_link"> FILTER </a>
+                <a href="#" id="event_icon" onclick="keskece(1)" class="main_link" id="redlink"> FILTER </a>
                 <a href="#" onclick="keskece(2)" id="vol_icon" class="main_link" id="vol_icon"> DATE </a>
                 <a href="#" onclick="keskece(3)" id="about_icon" class="main_link"> LOCATION </a>
                 <a href="#" onclick="keskece(4)" class="main_link" id="contact_icon"> CONTACT </a>
@@ -55,23 +59,33 @@
                 <h3> PRICE </h3>
                 <div class="priceList"> </div>
 
+                <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
+
             </div>
 
             <div id="sub_links_vol" class="sub_links hide">
 
-               <p> PUT A CALENDAR </p>
+              <!--Different method for today (JavaScript):-->
+<input id="today2" class="calendar" type="date">
+
+                <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
+
 
             </div>
             <div id="sub_links_about" class="sub_links hide">
 
               <h3> VENUES </h3>
+
+
               <div class="venuesList"></div>
+              <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
 
             </div>
 
              <div id="sub_links_contact" class="sub_links hide">
 
               <p> FETCH THE CONTACT </p>
+              <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
 
             </div>
 
@@ -87,7 +101,8 @@
     <div class="content contenu">
 
        <nav id="menutop">
-           <a class="menu_top_link" href="index.html"> EVENTS </a>
+          <br>
+           <a class="menu_top_link" id="redlink" href="index.html"> EVENTS </a>
         <a class="menu_top_link" href="infos.html"> INFOS  </a>
        <a class="menu_top_link" href="about.html"> ABOUT </a>
 

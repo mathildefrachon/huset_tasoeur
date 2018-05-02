@@ -39,17 +39,6 @@ function closeSub() {
     submenu.classList.remove('expend');
     submenu.classList.add('hidden');
     content.classList.toggle('shorter');
-    event_icon.style.color="white";
-    event_icon.style.fontSize="1em";
-
-    vol_icon.style.color="white";
-    vol_icon.style.fontSize="1em";
-
-    about_icon.style.color="white";
-    about_icon.style.fontSize="1em";
-
-    contact_icon.style.color="white";
-    contact_icon.style.fontSize="1em";
 
 
 }
@@ -67,17 +56,6 @@ function keskece(n) {
         submenu.classList.remove('expend');
         submenu.classList.add('hidden');
         content.classList.toggle('shorter');
-        event_icon.style.color="white";
-    event_icon.style.fontSize="1em";
-
-    vol_icon.style.color="white";
-    vol_icon.style.fontSize="1em";
-
-    about_icon.style.color="white";
-    about_icon.style.fontSize="1em";
-
-    contact_icon.style.color="white";
-    contact_icon.style.fontSize="1em";
 
     }
 
@@ -127,20 +105,30 @@ function showLinks(n) {
 
         case 1:
 
+//            if (currentSub == n) {
+//                sub_links_event.classList.add('fadeIn');
+//
+//            } else {
+//                sub_links_about.classList.remove('fadeOut');
+//                sub_links_vol.classList.remove('fadeOut');
+//                sub_links_contact.classList.remove('fadeOut');
+//                reStartFadeIn(n);
+//                reStartFadeOut(n);
+//
+//            }
 
             sub_links_event.classList.add('fadeIn');
+//            sub_links_about.classList.remove('fadeIn');
+//                sub_links_vol.classList.remove('fadeIn');
+//               sub_links_contact.classList.remove('fadeIn');
+//            sub_links_event.classList.remove('fadeOut');
+//            sub_links_about.classList.add('fadeOut');
+//                sub_links_vol.classList.add('fadeOut');
+//               sub_links_contact.classList.add('fadeOut');
+//
+//            reStartFadeIn(n);
+//                reStartFadeOut(n);
 
-            event_icon.style.color = "#961d27";
-            event_icon.style.fontSize = "1.2em";
-
-            vol_icon.style.color="white";
-            vol_icon.style.fontSize="1em";
-
-            about_icon.style.color="white";
-            about_icon.style.fontSize="1em";
-
-            contact_icon.style.color="white";
-            contact_icon.style.fontSize="1em";
 
 
 
@@ -162,20 +150,20 @@ function showLinks(n) {
 
         case 2: // I CLICK ON VOLUNTEER
 
+//            if (currentSub == n) {
+//                sub_links_vol.classList.add('fadeIn');
+//            } else {
+//                sub_links_about.classList.remove('fadeOut');
+//                sub_links_event.classList.remove('fadeOut');
+//                sub_links_contact.classList.remove('fadeOut');
+//                reStartFadeIn(n);
+//                reStartFadeOut(n);
+//            }
 
-            sub_links_vol.classList.add('fadeIn');
+              sub_links_vol.classList.add('fadeIn');
 
-            event_icon.style.color="white";
-            event_icon.style.fontSize="1em";
+//            reStartFadeIn(n);
 
-            vol_icon.style.color="#961d27";
-            vol_icon.style.fontSize="1.2em";
-
-            about_icon.style.color="white";
-            about_icon.style.fontSize="1em";
-
-            contact_icon.style.color="white";
-            contact_icon.style.fontSize="1em";
 
 
             sub_links_event.classList.add('hide');
@@ -195,21 +183,19 @@ function showLinks(n) {
 
         case 3: // I CLICK ON ABOUT
 
+//            if (currentSub == n) {
+//                sub_links_about.classList.add('fadeIn');
+//            } else {
+//                sub_links_vol.classList.remove('fadeOut');
+//                sub_links_event.classList.remove('fadeOut');
+//                sub_links_contact.classList.remove('fadeOut');
+//                reStartFadeIn(n);
+//                reStartFadeOut(n);
+//            }
 
             sub_links_about.classList.add('fadeIn');
 
-            event_icon.style.color="white";
-            event_icon.style.fontSize="1em";
-
-            vol_icon.style.color="white";
-            vol_icon.style.fontSize="1em";
-
-            about_icon.style.color="#961d27";
-            about_icon.style.fontSize="1.2em";
-
-            contact_icon.style.color="white";
-            contact_icon.style.fontSize="1em";
-
+//            reStartFadeIn(n);
 
             sub_links_event.classList.add('hide');
             sub_links_event.classList.remove('display');
@@ -228,22 +214,18 @@ function showLinks(n) {
 
         case 4: // I CLICK ON CONTACT
 
+//            if (currentSub == n) {
+//                sub_links_contact.classList.add('fadeIn');
+//            } else {
+//                sub_links_about.classList.remove('fadeOut');
+//                sub_links_vol.classList.remove('fadeOut');
+//                sub_links_event.classList.remove('fadeOut');
+//                reStartFadeIn(n);
+//                reStartFadeOut(n);
+//            }
 
             sub_links_contact.classList.add('fadeIn');
-
-             event_icon.style.color="white";
-            event_icon.style.fontSize="1em";
-
-            vol_icon.style.color="white";
-            vol_icon.style.fontSize="1em";
-
-            about_icon.style.color="white";
-            about_icon.style.fontSize="1em";
-
-            contact_icon.style.color="#961d27";
-            contact_icon.style.fontSize="1.2em";
-
-
+//            reStartFadeIn(n);
 
             sub_links_contact.classList.add('display');
             sub_links_contact.classList.remove('hide');
@@ -462,42 +444,3 @@ function reStartFadeOut(n) {
     }, false);
 
 }
-
-// CALENDAR //
-
-//let today = new Date().toISOString().substr(0, 10);
-//document.querySelector("#today").value = today;
-
-document.querySelector("#today2").valueAsDate = new Date();
-
-
-//MENU FOR MOBILE
-
-
-
-if (window.innerWidth < 480) {
-
-
-
-
-    function openMenu() {
-        console.log("open Menu");
-
-        document.getElementById("menutop").style.display = "block";
-
-
-        document.getElementById("burger").style.display = "none";
-        document.getElementById("cross").style.display = "block";
-    }
-
-    function closeMenu() {
-
-        console.log("close menu");
-        document.getElementById("menutop").style.display = "none";
-
-        document.getElementById("burger").style.display = "block";
-        document.getElementById("cross").style.display = "none";
-
-    }
-}
-

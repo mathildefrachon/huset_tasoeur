@@ -66,7 +66,7 @@
 
                  <h1 id="contact_title"></h1>
                  <p id="contact_descript"></p>
-<!--
+
        <h1> HUSET-KBH </h1>
        <p> Rådhusstræde 13
 1466 Copenhagen K
@@ -79,8 +79,13 @@ info@huset-kbh.dk </p>
       <h3>OPENING HOURS</h3>
        <p>
 Huset-KBH has varying opening hours. Check when doors open for the individual event here</p>
--->
-<!--        <div class="descript">DESC GOES HERE</div>-->
+
+
+
+<div id="map" style="margin-top: 10vw; width:20vw;height:20vw;background:red"></div>
+
+
+
 
 
 
@@ -104,7 +109,7 @@ Huset-KBH has varying opening hours. Check when doors open for the individual ev
         <nav id="menutop">
             <a class="menu_top_link" href="index.html"> EVENTS </a>
             <a class="menu_top_link" href="infos.html"> INFOS  </a>
-            <a class="menu_top_link" href="about.html"> ABOUT </a>
+            <a class="menu_top_link" id="redlink" href="about.html"> ABOUT </a>
 
 
 
@@ -136,6 +141,22 @@ Huset-KBH has varying opening hours. Check when doors open for the individual ev
 
 
 
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(55.676583, 12.574972),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
 
 
 
