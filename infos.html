@@ -1,3 +1,4 @@
+
 <html lang="">
 
 <head>
@@ -10,24 +11,17 @@
 
 <body>
 
+    <div id="burger" onclick="openMenu()">&#9776;</div>
+  <a id="cross" onclick="closeMenu()">&times;</a>
+
 
     <div class="navbar hidden">
 
         <div class="icons">
 
-<!--        <a href="#" onclick="keskece(4)" class="main_link" id="logo_link">  -->
+
         <img src="Huset_logo_22_red.png" alt="logo_menu" id="logo_menu" onclick="keskece(4)">
-<!--         </a>-->
 
-<!--
-            <div class="wrapper-menu">
-                <div class="line-menu half start"></div>
-                <div class="line-menu"></div>
-                <div class="line-menu half end"></div>
-
-
-            </div>
--->
 
             <div id="main_links">
                 <a href="#" id="event_icon" onclick="keskece(1)" class="main_link"> FILTER </a>
@@ -44,25 +38,65 @@
 
             <div id="sub_links_event" class="sub_links hide">
 
-                <p> FETCH THE CATEGORIES </p>
+               <h3> ART STAGE </h3>
+                <div class="artList"> </div>
+                <h3> FILMS </h3>
+                <div class="filmList"> </div>
+                <h3> MUSIC </h3>
+                <div class="musicList"> </div>
+                <h3> SPOKEN WORD </h3>
+                <div class="spokenList"> </div>
+                <h3> OTHER </h3>
+                <div class="otherList"> </div>
+                <h3> PRICE </h3>
+                <div class="priceList"> </div>
 
+                <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
 
             </div>
 
             <div id="sub_links_vol" class="sub_links hide">
 
-               <p> PUT A CALENDAR </p>
+               <input id="today2" class="calendar" type="date">
+
+                <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
+
 
             </div>
             <div id="sub_links_about" class="sub_links hide">
 
-              <p> FETCH THE VENUES </p>
+              <h3> VENUES </h3>
+
+
+              <div class="venuesList"></div>
+              <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
+
 
             </div>
 
              <div id="sub_links_contact" class="sub_links hide">
 
-              <p> FETCH THE CONTACT </p>
+               <h1 id="contact_title"></h1>
+                 <p id="contact_descript"></p>
+
+       <h1> HUSET-KBH </h1>
+       <p> Rådhusstræde 13
+1466 Copenhagen K
+Tlf: +45 21 51 21 51
+
+info@huset-kbh.dk </p>
+
+      <h2>OFFICE OPENING HOURS: WEEKDAYS 11.00-15.00 P.M
+</h2>
+      <h3>OPENING HOURS</h3>
+       <p>
+Huset-KBH has varying opening hours. Check when doors open for the individual event here</p>
+
+
+
+<div id="map" style="margin-top: 10vw; width:20vw;height:20vw;background:red"></div>
+
+            <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
 
             </div>
 
@@ -78,7 +112,7 @@
     <div class="content contenu">
 
        <nav id="menutop">
-           <a class="menu_top_link" href="index.html"> EVENTS </a>
+           <a class="menu_top_link" href="index.html"> ALL EVENTS </a>
         <a class="menu_top_link" id="redlink" href="infos.html"> INFOS  </a>
        <a class="menu_top_link" href="about.html"> ABOUT </a>
 

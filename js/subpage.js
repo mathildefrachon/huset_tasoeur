@@ -4,7 +4,7 @@ let id = urlParams.get("id");
 console.log("i want to get article: " + id);
 
 
-fetch("http://wordpress-huset.mathildefrachon.com/wp-json/wp/v2/events/"+id)
+fetch("http://wordpress-huset.mathildefrachon.com/wp-json/wp/v2/events/" +id + "?_embed")
   .then(e=>e.json())
   .then(showSinglePost)
 
@@ -38,7 +38,7 @@ function showSinglePost(aPost){
     if (aPost._embedded) { //images ._embedded to grab all the data we got
 
         console.log(aPost._embedded["wp:featuredmedia"]);
-        document.querySelector("img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+        document.querySelector(".image").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
     } else { // no images
 
         document.querySelector("img").remove()

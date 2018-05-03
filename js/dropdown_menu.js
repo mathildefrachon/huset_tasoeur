@@ -471,6 +471,16 @@ function reStartFadeOut(n) {
 document.querySelector("#today2").valueAsDate = new Date();
 
 
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(55.676583, 12.574972),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+
 //MENU FOR MOBILE
 
 

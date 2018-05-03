@@ -148,7 +148,7 @@ iframe {
 
 #menutop {
     width: 60vw;
-    height: 2vh;
+    height: 7vh;
     padding: 0vw 10vw 2vw 0vw;
     border-bottom: white solid 0.2vw;
     margin-bottom: 10vw;
@@ -301,6 +301,11 @@ a:visited {
 
 
 /* STYLE */
+
+
+.icon_png {
+    width:5vw;
+}
 
 .backButton {
     width: 1.5vw;
@@ -490,7 +495,14 @@ focus {
     -moz-box-shadow: none;
 }
 
+
+
+/* START MOBILE VERSION */
+
+
 @media only screen and (max-width:480px) and (orientation:portrait) {
+
+    /* MENU SIDE */
     .navbar {
         width: 100vw;
         height: 40vh;
@@ -529,15 +541,13 @@ focus {
     }
     .sub_links {
         font-size: 0.8em;
-        /*
-    position: absolute;
-    left: 15vw;
-    top: 0vw;
-*/
+
         width: 100vw;
         padding: 25vw 15vw 10vw 15vw;
-        /*    float: right;*/
+
     }
+
+    /* CATEGORIES */
     .art,
     .film,
     .music,
@@ -567,7 +577,7 @@ focus {
 
 
 
-
+/* CONTENT STYLE */
 
     #event_list {
         display: block;
@@ -608,15 +618,13 @@ focus {
     margin-top: 50vh;
     padding: 0vw 0vw 0vw 0vw;
     border-bottom: white solid 1vw;
-/*    margin-bottom: 10vw;*/
-/*        padding-top: 40vh;*/
+
 
     }
 
     .menu_top_link {
         display: block;
-/*        top:30vh;*/
-/*        margin-top:15%;*/
+
         font-size: 2em;
 
     }
@@ -639,4 +647,9 @@ focus {
         display:block;
     }
 
+
+    #redlink {
+    color: #961d27;
+    font-size: 2em;
+}
 }

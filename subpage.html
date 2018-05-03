@@ -10,6 +10,9 @@
 
 <body>
 
+ <div id="burger" onclick="openMenu()">&#9776;</div>
+  <a id="cross" onclick="closeMenu()">&times;</a>
+
 
     <div class="navbar hidden">
 
@@ -17,15 +20,7 @@
 
             <img src="Huset_logo_22_red.png" alt="logo_menu" id="logo_menu" onclick="keskece(4)">
 
-            <!--
-            <div class="wrapper-menu">
-                <div class="line-menu half start"></div>
-                <div class="line-menu"></div>
-                <div class="line-menu half end"></div>
 
-
-            </div>
--->
 
             <div id="main_links">
                 <a href="#" id="event_icon" onclick="keskece(1)" class="main_link"> FILTER </a>
@@ -42,7 +37,7 @@
 
             <div id="sub_links_event" class="sub_links hide">
 
-               <h3> ART STAGE </h3>
+                <h3> ART STAGE </h3>
                 <div class="artList"> </div>
                 <h3> FILMS </h3>
                 <div class="filmList"> </div>
@@ -55,22 +50,31 @@
                 <h3> PRICE </h3>
                 <div class="priceList"> </div>
 
+                <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
+
 
 
             </div>
 
             <div id="sub_links_vol" class="sub_links hide">
 
-                <p> PUT A CALENDAR </p>
+
+                <input id="today2" class="calendar" type="date">
+
+                <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
+
 
             </div>
             <div id="sub_links_about" class="sub_links hide">
 
                 <h3> VENUES </h3>
-              <div class="venuesList"></div>
-
+                <div class="venuesList"></div>
+              <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
 
             </div>
+
+
+
 
             <div id="sub_links_contact" class="sub_links hide">
 
@@ -78,9 +82,9 @@
 
 
 
-                 <h1 id="contact_title"></h1>
-                 <p id="contact_descript"></p>
-<!--
+                <h1 id="contact_title"></h1>
+                <p id="contact_descript"></p>
+                <!--
        <h1> HUSET-KBH </h1>
        <p> Rådhusstræde 13
 1466 Copenhagen K
@@ -94,10 +98,10 @@ info@huset-kbh.dk </p>
        <p>
 Huset-KBH has varying opening hours. Check when doors open for the individual event here</p>
 -->
-<!--        <div class="descript">DESC GOES HERE</div>-->
+                <!--        <div class="descript">DESC GOES HERE</div>-->
 
 
-
+<a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
 
 
 
@@ -116,6 +120,7 @@ Huset-KBH has varying opening hours. Check when doors open for the individual ev
     <div class="content contenu">
 
         <nav id="menutop">
+           <br>
             <a class="menu_top_link" href="index.html"> ALL EVENTS </a>
             <a class="menu_top_link" href="infos.html"> INFOS  </a>
             <a class="menu_top_link" href="about.html"> ABOUT </a>
@@ -124,27 +129,27 @@ Huset-KBH has varying opening hours. Check when doors open for the individual ev
 
         </nav>
 
-<!--        <h1 class="page_title"> HUSET:KBH </h1>-->
+
 
 
 
         <div id="onePost">
 
-       <h1> TITLE </h1>
-        <div class="genre"></div>
-       <img class="image" src="" alt="event_img">
-       <h2 class="price">PRICE</h2>
-        <div class="date"></div>
-         <div class="time"></div>
-         <div class="location"></div>
+            <h1> TITLE </h1>
+            <div class="genre"></div>
+            <img class="image" src="" alt="event_img">
+            <h2 class="price">PRICE</h2>
+            <div class="date"></div>
+            <div class="time"></div>
+            <div class="location"></div>
 
-        <div class="descript">DESC GOES HERE</div>
-        <div class="small-descript">DESC GOES HERE</div>
-
-
+            <div class="descript">DESC GOES HERE</div>
+<!--            <div class="small-descript">DESC GOES HERE</div>-->
 
 
-      </div>
+
+
+        </div>
 
 
 

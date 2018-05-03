@@ -1,3 +1,4 @@
+
 <html lang="">
 
 <head>
@@ -10,6 +11,9 @@
 
 <body>
 
+<div id="burger" onclick="openMenu()">&#9776;</div>
+  <a id="cross" onclick="closeMenu()">&times;</a>
+
 
     <div class="navbar hidden">
 
@@ -17,15 +21,7 @@
 
             <img src="Huset_logo_22_red.png" alt="logo_menu" id="logo_menu" onclick="keskece(4)">
 
-            <!--
-            <div class="wrapper-menu">
-                <div class="line-menu half start"></div>
-                <div class="line-menu"></div>
-                <div class="line-menu half end"></div>
 
-
-            </div>
--->
 
             <div id="main_links">
                 <a href="#" id="event_icon" onclick="keskece(1)" class="main_link"> FILTER </a>
@@ -42,19 +38,38 @@
 
             <div id="sub_links_event" class="sub_links hide">
 
-                <p> FETCH THE CATEGORIES </p>
+                 <h3> ART STAGE </h3>
+                <div class="artList"> </div>
+                <h3> FILMS </h3>
+                <div class="filmList"> </div>
+                <h3> MUSIC </h3>
+                <div class="musicList"> </div>
+                <h3> SPOKEN WORD </h3>
+                <div class="spokenList"> </div>
+                <h3> OTHER </h3>
+                <div class="otherList"> </div>
+                <h3> PRICE </h3>
+                <div class="priceList"> </div>
+
+                <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
 
 
             </div>
 
             <div id="sub_links_vol" class="sub_links hide">
+ <input id="today2" class="calendar" type="date">
 
-                <p> PUT A CALENDAR </p>
+                <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
+
 
             </div>
             <div id="sub_links_about" class="sub_links hide">
 
-                <p> FETCH THE VENUES </p>
+                <h3> VENUES </h3>
+
+
+              <div class="venuesList"></div>
+              <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
 
             </div>
 
@@ -84,6 +99,8 @@ Huset-KBH has varying opening hours. Check when doors open for the individual ev
 
 <div id="map" style="margin-top: 10vw; width:20vw;height:20vw;background:red"></div>
 
+ <a href="#" onclick="closeSub()"><img class="backButton" src="Huset_logo_22_white.png" ></a>
+
 
 
 
@@ -107,7 +124,7 @@ Huset-KBH has varying opening hours. Check when doors open for the individual ev
     <div class="content contenu">
 
         <nav id="menutop">
-            <a class="menu_top_link" href="index.html"> EVENTS </a>
+            <a class="menu_top_link" href="index.html"> ALL EVENTS </a>
             <a class="menu_top_link" href="infos.html"> INFOS  </a>
             <a class="menu_top_link" id="redlink" href="about.html"> ABOUT </a>
 
@@ -141,16 +158,6 @@ Huset-KBH has varying opening hours. Check when doors open for the individual ev
 
 
 
-<script>
-function myMap() {
-var mapOptions = {
-    center: new google.maps.LatLng(55.676583, 12.574972),
-    zoom: 10,
-    mapTypeId: google.maps.MapTypeId.HYBRID
-}
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-}
-</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 <!--
@@ -163,7 +170,7 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 
 
 
-    <script src="js/fetching_contact.js"></script>
+<!--    <script src="js/fetching_contact.js"></script>-->
     <script src="js/dropdown_menu.js"></script>
     <script src="js/fetching_about.js"></script>
 
